@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv 主题
 % \moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
@@ -22,14 +22,15 @@
 \setCJKmonofont{Noto Sans Mono CJK SC}
 
 % 调整页边距
-\usepackage[scale=0.8]{geometry}
+% \usepackage[scale=0.85]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \recomputelengths
-%\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
 
 % 个人信息
 \name{陆昊阳}{}
 % \title{简历题目 (可选项)}                     % 可选项、如不需要可删除本行
-% \address{街道及门牌号}{邮编及城市}            % 可选项、如不需要可删除本行
+\address{北京市海淀区北京大学王克桢楼1103室}{}            % 可选项、如不需要可删除本行
 \phone[mobile]{+8618670332855}              % 可选项、如不需要可删除本行
 % \phone[fixed]{+2~(345)~678~901}               % 可选项、如不需要可删除本行
 % \phone[fax]{+3~(456)~789~012}                 % 可选项、如不需要可删除本行
@@ -59,15 +60,22 @@
 
 \section{教育背景}
 % \cventry{years}{degree/job title}{institution/employer} {localization}{optional: grade/...}{optional: comment/job description}
-\cventry{年 -- 年}{学位}{院校}{城市}{\textit{成绩}}{说明}  % 第3到第6编码可留白
-\cventry{年 -- 年}{学位}{院校}{城市}{\textit{成绩}}{说明}
+\cventry{2016 -- 2021}{博士，整合生命科学（心理学）}{北京大学}{北京}{}{}  % 第3到第6编码可留白
+\cventry{2012 -- 2016}{理学学士，心理学}{中山大学}{广州}{}{
+  \begin{itemize}
+    \item GPA: 3.98/4.00
+    \item 优秀毕业生
+  \end{itemize}}
 
-\section{毕业论文}
-% %to typeset lines with a hint on the left: 
-% \cvline{leftmark}{text} or \cvitem{leftmark}{text}
-\cvitem{题目}{\emph{题目}}
-\cvitem{导师}{导师}
-\cvitem{说明}{\small 论文简介}
+% \section{毕业论文}
+% % %to typeset lines with a hint on the left: 
+% % \cvline{leftmark}{text} or \cvitem{leftmark}{text}
+% \cvitem{题目}{\emph{题目}}
+% \cvitem{导师}{导师}
+% \cvitem{说明}{\small 论文简介}
+
+\section{相关经验}
+
 
 \section{工作背景}
 \subsection{专业}
