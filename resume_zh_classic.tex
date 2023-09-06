@@ -6,19 +6,19 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[10pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,roman]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv 主题
 % \moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
 % \moderncvcolor{blue}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
 \moderncvtheme[blue]{classic}
-%\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
 
 % 字符编码
 \usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
 % \usepackage{CJKutf8}
 \usepackage{xeCJK}
-\setCJKmainfont{Noto Sans CJK SC}
+\setCJKmainfont{Noto Serif CJK SC}
 \setCJKmonofont{Noto Sans Mono CJK SC}
 
 % 调整页边距
@@ -26,6 +26,9 @@
 \usepackage[margin=0.5in]{geometry}
 \recomputelengths
 \setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+
+% 对列表各项逆序编号（用于对文章进行编号）
+\usepackage[itemsep=2pt]{etaremune}
 
 % 个人信息
 \name{陆昊阳}{}
@@ -36,7 +39,7 @@
 % \phone[fax]{+3~(456)~789~012}                 % 可选项、如不需要可删除本行
 \email{luhy@pku.edu.cn}                    % 可选项、如不需要可删除本行
 \social[github]{hy-lu}
-\social[researchgate]{Haoyang_Lu2}
+% \social[researchgate]{Haoyang_Lu2}
 \social[linkedin]{haoyang-lu}
 % \homepage{www.xialongli.com}                  % 可选项、如不需要可删除本行
 % \extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
@@ -58,9 +61,11 @@
 % \begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
 \maketitle
 
+% \cvitem{政治面貌}{共青团员}
+
 \section{教育背景}
 % \cventry{years}{degree/job title}{institution/employer} {localization}{optional: grade/...}{optional: comment/job description}
-\cventry{2016 -- 2021}{博士，整合生命科学（心理学）}{北京大学}{北京}{}{}  % 第3到第6编码可留白
+\cventry{2016 -- 2022}{博士，整合生命科学（心理学）}{北京大学}{北京}{}{}  % 第3到第6编码可留白
 \cventry{2012 -- 2016}{理学学士，心理学}{中山大学}{广州}{}{
   \begin{itemize}
     \item GPA: 3.98/4.00
@@ -74,81 +79,103 @@
 % \cvitem{导师}{导师}
 % \cvitem{说明}{\small 论文简介}
 
-\section{相关经验}
+\section{荣誉奖项}
+\cvitem{2022}{北京大学优秀毕业生}
+\cvitem{2020}{北京大学三好学生标兵，学术创新奖，博士国家奖学金}
+\cvitem{2019}{北京大学三好学生，廖凯原奖学金}
+% \cvitem{2017}{北京大学学习进步奖，五四奖学金}
+\cvitem{2016}{中山大学优秀毕业生，优秀本科毕业论文}
+\cvitem{2013 -- 2015}{中山大学一等奖学金}
+\cvitem{2013, 2015}{国家奖学金}
+% \cvitem{2014}{佐丹奴奖学金}
 
+\section{研究方向及兴趣}
+\cvitem{}{孤独症谱系障碍，信息采样，决策，计算建模，计算精神病学，数据可视化}
 
-\section{工作背景}
-\subsection{专业}
-\cventry{年 -- 年}{职位}{公司}{城市}{}{不超过1--2行的概况说明\newline{}%
-工作内容:%
-\begin{itemize}%
-\item 工作内容 1;
-\item 工作内容 2、 含二级内容:
-  \begin{itemize}%
-  \item 二级内容 (a);
-  \item 二级内容 (b)、含三级内容 (不建议使用);
-    \begin{itemize}
-    \item 三级内容 i;
-    \item 三级内容 ii;
-    \item 三级内容 iii;
-    \end{itemize}
-  \item 二级内容 (c);
+\section{研究经历}
+\cventry{2016 -- 2022}{博士学位论文研究：孤独症与信息采样}{儿童发展实验室（易莉研究员）、认知决策实验室（张航研究员）}{心理与认知科学学院、前沿交叉学科研究院}{北京大学}{
+  \begin{itemize}
+    \item 论文标题：孤独症及具有广泛孤独症表型个体的推断与决策
+    \item 学位论文探究了在成人与儿童中孤独症特质以及高功能孤独症对于工具性与非工具性信息采样过程的影响
+    \item 利用眼动技术记录了成人与儿童在决策过程中的注视点与瞳孔数据，使用线性混合模型以及贝叶斯统计方法进行了数据分析，并行为、反应时进行了计算建模，探索了个体进行信息采样中的认知过程
+    \item 为实验室开发了基于 R 的眼动注视点计算、瞳孔预处理工具，以及问卷及韦氏智力测验报告自动生成工具
+    \item 部分研究成果已发表在同行评议的国际期刊上，并多次在 INSAR 等国际会议上进行过展示
   \end{itemize}
-\item 工作内容 3。
-\end{itemize}}
-\cventry{年 -- 年}{职位}{公司}{城市}{}{说明行1\newline{}说明行2}
-\subsection{其他}
-\cventry{年 -- 年}{职位}{公司}{城市}{}{说明}
+}
+\cventry{2018}{独立研究：孤独症中的视觉观点采择}{儿童发展实验室（易莉研究员）}{心理与认知科学学院、前沿交叉学科研究院}{北京大学}{
+  \begin{itemize}
+    \item 利用“dot perspective-taking”范式探究了孤独症青少年至成人中内隐的一阶观点采择表现
+    \item 通过 MATLAB Psychotoolbox 制作了基于游戏手柄操作控制的实验程序，并在 R 中进行了相应统计分析
+    \item 指导了后续实验室的本科生科研：成人中孤独症特质对于观点采择的影响
+  \end{itemize}
+}
+\cventry{2017}{独立研究：孤独症特质与信息采样的双生子研究}{儿童发展实验室（易莉研究员）}{心理与认知科学学院、前沿交叉学科研究院}{北京大学}{
+  \begin{itemize}
+    \item 与中山大学眼科医院、中山大学统计系合作，在数百对同卵或异卵双生子儿童及青少年中探究了遗传与环境对于孤独症特质及信息采样的影响
+    \item 在 R 中利用 ACE 模型探究双生子数据中，遗传、共同及特定环境对于孤独症特质以及信息采样过程的影响
+  \end{itemize}
+}
+\cventry{2015 -- 2016}{本科学位论文研究：孤独症儿童的信任与欺骗行为}{儿童发展实验室（易莉副教授）}{心理学系}{中山大学}{
+  \begin{itemize}
+    \item 论文标题：社会互动中孤独症儿童对不信任和欺骗行为的学习缺陷
+    \item 在社会学习的框架下，创新地构造了可控的社会与非社会场景，探究了社会情景对于孤独症和典型发育儿童的（不）信任与欺骗行为的学习过程的影响
+    \item 利用了生存分析的统计方法对儿童在短时间内的学习过程进行了探索
+    \item 本论文获得了中山大学优秀毕业论文，后续发表于孤独症研究领域有影响力的国际期刊
+  \end{itemize}
+}
+\cventry{2015 -- 2016}{微博账户社交信息预测用户的人格特质}{林盈实验室}{心理学系}{中山大学}{
+  \begin{itemize}
+    \item 利用神经网络模型对微博用户的社交信息（例如，转评数、粉丝数、关注数等）进行学习并预测微博用户的“大五”人格特质
+    \item 基于 MATLAB 自主构建了深度自编码器神经网络（deep autoenocoder neural network）以及后续的交叉验证以评估网络表现
+  \end{itemize}
+}
+\cventry{2014 -- 2015}{催产素对于成人的信任与欺骗行为的影响}{儿童发展实验室（易莉副教授）}{心理学系}{中山大学}{
+  \begin{itemize}
+    \item 通过鼻喷给药的方式向成人被试给予催产素，并探究其如何对社交情景下的（不）欺骗与信任行为的学习过程产生影响
+    \item 利用 E-Prime 设计实验，并通过生存分析等方法对不同给药组的成人被试的学习过程进行了分析
+  \end{itemize}
+}
 
-\section{语言技能}
-% \cvlanguage{name}{level}{comment}
-\cvitemwithcomment{语言 1}{水平}{评价}
-\cvitemwithcomment{语言 2}{水平}{评价}
-\cvitemwithcomment{语言 3}{水平}{评价}
+\section{出版物}
+\subsection{同行评议论文}
+\input{journal}
+\subsection{会议摘要}
+\input{conference}
 
-\section{计算机技能}
-% \cvcomputer{category}{programs}{category}{programs}
-% \cvdoubleitem{subtitle}{text}{subtitle}{text}
-\cvdoubleitem{类别 1}{XXX, YYY, ZZZ}{类别 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{类别 2}{XXX, YYY, ZZZ}{类别 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{类别 3}{XXX, YYY, ZZZ}{类别 6}{XXX, YYY, ZZZ}
+\section{工作经历}
+\cventry{2017 -- 2021}{课程助教}{心理与认知科学学院}{北京大学}{}{
+  \begin{itemize}
+    \item 课程：孤独症研究专题，儿童心理病理学，心理学论文写作
+    \item 工作内容：组织课堂讨论与线下课程实习，批改作业并评分，授助教课《科研作图指南》
+  \end{itemize}
+}
+\cventry{2020 -- 2021}{客座授课}{心理与认知科学学院}{北京大学}{}{
+  \begin{itemize}
+    \item 课程：科学写作与交流，计算建模在心理学和神经科学中的应用
+    \item 授课内容：《Ten Simple Rules for Better Figures》，《Reproducibility and Literate Programming in R》
+  \end{itemize}
+}
+\cventry{2018 -- 2022}{课程培训人员}{思影科技有限公司}{重庆、南京、上海、北京}{}{
+  \begin{itemize}
+    \item 课程：眼动数据处理，R 语言统计
+    \item 授课内容：在 R 中高效地对眼动数据与行为数据进行整理以及可视化
+  \end{itemize}
+}
 
-\section{个人兴趣}
-\cvitem{爱好 1}{\small 说明}
-\cvitem{爱好 2}{\small 说明}
-\cvitem{爱好 3}{\small 说明}
+\section{学术团体与服务}
+\cvitem{团体会员}{Society for Research in Child Development, International Society for Autism Research, Cognitive Science Society}
+\cvitem{服务}{Journal of Autism and Developmental Disorders 审稿人}
 
-% 插入分页符
-% If necessary, there is a command to close the section:
-% \closesection{}
-% \pagebreak
-
-\section{其他 1}
-\cvlistitem{项目 1}
-\cvlistitem{项目 2}
-\cvlistitem{项目 3}
-
-\renewcommand{\listitemsymbol}{-}             % 改变列表符号
-
-\section{其他 2}
-\cvlistdoubleitem{项目 1}{项目 4}
-\cvlistdoubleitem{项目 2}{项目 5\cite{book1}}
-\cvlistdoubleitem{项目 3}{}
-
-% 来自BibTeX文件但不使用multibib包的出版物
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX的数字标签
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                    % 'publications' 是BibTeX文件的文件名
-
-% 来自BibTeX文件并使用multibib包的出版物
-%\section{出版物}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}               % 'publications' 是BibTeX文件的文件名
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}               % 'publications' 是BibTeX文件的文件名
+\section{专业技能与语言水平}
+\cvitemwithcomment{研究工具}{眼动}{掌握}
+\cvitemwithcomment{}{fNIRS, fMRI, EEG}{了解}
+\cvitemwithcomment{数据分析}{贝叶斯统计及层级贝叶斯模型，（广义）线性混合模型，广义加性模型}{掌握}
+\cvitemwithcomment{}{生存分析，结构方程模型，机器学习方法}{熟悉}
+\cvitemwithcomment{编程/统计相关}{R, MATLAB, Psychotoolbox}{精通}
+\cvitemwithcomment{}{Stan, SPSS, PsychoPy/PsychoJs, Git}{掌握}
+\cvitemwithcomment{}{JAGS, Mplus, E-Prime, Visual Basic, C++, Python, LaTeX}{熟悉}
+\cvitemwithcomment{语言}{英语}{高级}
+\cvitemwithcomment{}{法语}{初级}
 
 \clearpage
 % \end{CJK}
