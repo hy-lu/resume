@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[12pt,a4paper,roman]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv 主题
 % \moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
@@ -62,25 +62,23 @@
 % \begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
 \maketitle
 
-% \cvitem{政治面貌}{共青团员}
-
 \section{Research interest}
-\cvitem{}{I am interested in computational psychiatry in general. My research involves using the methods of computational cognitive sciences to understand the cognitive mechanisms underlying the core symptoms of mental disorders. In my PhD thesis, I applied these methods to investigate the (non-)instrumental information sampling in both autistic children and neurotypical individuals. Currently, I am studying the cognitive processes involved in the formation and updating of superstitious beliefs, such as illusory control.}
+\cvitem{}{I am interested in computational psychiatry in general. My research involves using the methods of computational cognitive sciences to understand mental disorders. In my PhD thesis, I applied these methods to investigate the (non-)instrumental information sampling in autistic children. Currently, I am studying the cognitive processes involved in the formation and updating of superstitious beliefs. In the future, I hope to use AI and computational methods to further understand and help people with mental health issues.}
 
 \section{Employment}
-\cventry{2022 -- Present}{Postdoctoral Resaerch Fellow}{School of Psychological and Cognitive Sciences, Peking University}{}{}{Advisor: Hang Zhang}
+\cventry{2022 -- Present}{Postdoctoral Resaerch Fellow (with Boya postdoctoral fellowship)}{School of Psychological and Cognitive Sciences, Peking University}{}{}{Advisor: Hang Zhang}
 
 \section{Education}
 % \cventry{years}{degree/job title}{institution/employer} {localization}{optional: grade/...}{optional: comment/job description}
-\cventry{2016 -- 2022}{PhD in Integrated Life Sciences (Psychology)}{Peking University}{China}{}{}  % 第3到第6编码可留白
-\cventry{2012 -- 2016}{BSc in Psychology}{Sun Yat-Sen University}{China}{}{}
+\cventry{2016 -- 2022}{PhD in Integrated Life Sciences (Psychology)}{Peking University}{Beijing, China}{}{}  % 第3到第6编码可留白
+\cventry{2012 -- 2016}{BSc in Psychology}{Sun Yat-Sen University}{Guangzhou, China}{}{}
 
 \section{Thesis}
 % %to typeset lines with a hint on the left: 
 % \cvline{leftmark}{text} or \cvitem{leftmark}{text}
 \cvitem{Title}{\emph{Inference and Decision-making in People with Autism Spectrum Disorder or Broader Autism Phenotype}}
 \cvitem{Advisors}{Li Yi, Hang Zhang}
-\cvitem{Short abstract}{\small Beyond the core symptoms of autism, such as deficits in social interaction and repetitive/stereotyped behaviors, studies have found deficits and abnormalities in other non- social functions, such as perception and learning processes. However, while previous theories on autism spectrum disorder (ASD) have tried to explain specific symptoms, none could cover the various phenomena found in research. The Bayesian framework was introduced into autism research in 2012. It attempted to unify the atypical process of perception, learning, and social cognition at all levels in terms of abnormalities in perceptual updating for the hypothesis regarding the environment. In recent years, the Bayesian theory of ASD also included active inference to address the atypicalities in ASD. The core viewpoint under this framework is that the core features of ASD are all pertinent to how individuals interact with and sample the world. Therefore, it is crucial to understand the outcome of atypical active inference. Based on this perspective, this thesis investigates one type of active inference, disambiguatory active inference in ASD by integrating behavioral experiments, eye-tracking techniques, and computational modeling.}
+\cvitem{Introduction}{\small The core features of autism spectrum disorders (ASD) are believed to be pertinent to how individuals interact with and sample the world. Therefore, it is crucial to understand the outcome of atypical active inference in ASD. In this interdisciplinary project, I worked with two advisors, one specializing in child psychopathology (Prof. Li Yi) and the other in computational cognitive science (Prof. Hang Zhang). We conducted a series of studies on information sampling in both autistic children and adults with a broader autism phenotype. Through the clinical experience with autistic children and the use of Bayesian linear mixed models and hierarchical Bayesian modeling, we gained a deeper understanding of the behavioral, attentional, and cognitive processes that differ between autistic individuals and neurotypical people in both instrumental and non-instrumental information sampling.}
 
 \section{Publications}
 \subsection{Peer-reviewed journal articles}
@@ -90,23 +88,24 @@
 
 \section{Teaching}
 \cventry{2018 -- 2023}{Workshop lecturer}{R for Eye-tracking data analysis}{Chongqing, Nanjing, Shanghai, Beijing}{}{Design and deliver a 2-day workshop for learning to use R for data analysis, particularly eye-tracking data.}
-\cventry{2021, 2022, 2023}{Teaching assistant}{Effective writing and communication in science}{Peking University}{}{Design, tutorial delivery, and marking. Also deliver 1~2 hr lecture on how to do scientific data visualization.}
+\cventry{2021 -- 2023}{Teaching assistant}{Effective writing and communication in science}{Peking University}{}{Design, tutorial delivery, and marking. Also deliver a 1\textasciitilde2 hr lecture on how to do scientific data visualization.}
 \cventry{2020}{Guest lecturer}{Introduction to Cognitive Modeling}{Peking University}{}{Delivery a one-hour tutorial on Reproducibility and Literate Programming in R}
 \cventry{2018}{Teaching assistant}{Child psychopathology}{Peking University}{}{Marking and organizing group projects.}
 \cventry{2017}{Teaching assistant}{Topics in Autism Research}{Peking University}{}{Design, marking, and organizing class discussion.}
 
 \section{Professional membership and service}
 \cvitem{Membership}{Society for Research in Child Development; International Society for Autism Research; Cognitive Science Society; Society for Neuroeconomics}
-\cvitem{Reviewing}{Journal of Autism and Developmental Disorders; eLife; OpenMind}
+\cvitem{Reviewing}{Autism Research; Journal of Autism and Developmental Disorders; eLife; OpenMind}
 
 \section{Professional skills and languages}
-\cvitemwithcomment{Research}{Eye-tracking}{Expert}
+\cvitemwithcomment{Research}{Eye-tracking, computational modeling}{Expert}
 \cvitemwithcomment{}{fNIRS, fMRI, EEG}{Beginner}
-\cvitemwithcomment{Statistics}{Bayesian statistics, Generalizaed linear mixed model, Generalized additive model}{Expert}
-\cvitemwithcomment{}{Survival analysis, Structural equation models, Machine learning methods}{Proficient}
+\cvitemwithcomment{Statistics}{Bayesian statistics, Generalizaed linear mixed model}{Expert}
+\cvitemwithcomment{}{Generalized additive model, Survival analysis, Structural equation models}{Proficient}
+\cvitemwithcomment{}{Machine learning methods}{Intermediate}
 \cvitemwithcomment{Programming}{R, MATLAB, Psychotoolbox}{Expert}
 \cvitemwithcomment{}{Stan, SPSS, PsychoPy/PsychoJs, Git}{Proficient}
-\cvitemwithcomment{}{JAGS, Mplus, E-Prime, Visual Basic, C++, Python, LaTeX}{Intermediate}
+\cvitemwithcomment{}{Python, JAGS, Mplus, E-Prime, Visual Basic, C++, \LaTeX}{Intermediate}
 \cvitemwithcomment{Languages}{English}{Advanced}
 \cvitemwithcomment{}{Chinese}{Native}
 
