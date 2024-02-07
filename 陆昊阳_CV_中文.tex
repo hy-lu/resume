@@ -6,27 +6,39 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,roman]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv 主题
 % \moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
 % \moderncvcolor{blue}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
 \moderncvtheme[blue]{classic}
 % \moderncvstyle{banking}
-\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+% \nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\the\year/\the\month}
+\fancyfoot[C]{\small 陆昊阳}
+\fancyfoot[R]{\thepage}
 
 % 字符编码
 \usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
 % \usepackage{CJKutf8}
+\usepackage{fontspec}
+\usepackage{xunicode}
 \usepackage{xeCJK}
-\setCJKmainfont{Noto Serif CJK SC}
+\setmainfont{Merriweather}
+\setsansfont{Source Sans 3}
+% \setsansfont{Helvetica Neue-Light}
+\setmonofont{Courier New}
+% \setCJKmainfont{Noto Serif CJK SC}
+\setCJKmainfont{Noto Sans CJK SC}
 \setCJKmonofont{Noto Sans Mono CJK SC}
 
 % 调整页边距
-% \usepackage[scale=0.85]{geometry}
+% \usepackage[scale=0.9]{geometry}
 \usepackage[margin=0.5in]{geometry}
 \recomputelengths
-\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+\setlength{\hintscolumnwidth}{2cm}           % 如果你希望改变日期栏的宽度
 
 % 对列表各项逆序编号（用于对文章进行编号）
 \usepackage[itemsep=2pt]{etaremune}
@@ -34,13 +46,13 @@
 % 个人信息
 \name{陆昊阳}{}
 % \title{简历题目 (可选项)}                     % 可选项、如不需要可删除本行
-\address{北京市海淀区北京大学王克桢楼1103室}{}            % 可选项、如不需要可删除本行
+\address{北京市海淀区北京大学王克桢楼1305室}{}            % 可选项、如不需要可删除本行
 \phone[mobile]{+8618670332855}              % 可选项、如不需要可删除本行
 % \phone[fixed]{+2~(345)~678~901}               % 可选项、如不需要可删除本行
 % \phone[fax]{+3~(456)~789~012}                 % 可选项、如不需要可删除本行
 \email{luhy@pku.edu.cn}                    % 可选项、如不需要可删除本行
 \social[github]{hy-lu}
-\social[researchgate]{Haoyang\_Lu2}
+\social[researchgate]{Haoyang-Lu}
 \social[linkedin]{haoyang-lu}
 % \homepage{www.xialongli.com}                  % 可选项、如不需要可删除本行
 % \extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
@@ -64,9 +76,11 @@
 
 % \cvitem{政治面貌}{共青团员}
 
-\section{教育及工作经历}
-% \cventry{years}{degree/job title}{institution/employer} {localization}{optional: grade/...}{optional: comment/job description}
+\section{工作经历}
 \cventry{2022 -- 现今}{博雅博士后}{心理与认知科学学院，北京大学}{北京}{}{导师：张航研究员}
+
+\section{教育背景}
+% \cventry{years}{degree/job title}{institution/employer} {localization}{optional: grade/...}{optional: comment/job description}
 \cventry{2016 -- 2022}{博士，整合生命科学（心理学）}{北京大学}{北京}{}{}  % 第3到第6编码可留白
 \cventry{2012 -- 2016}{理学学士，心理学}{中山大学}{广州}{}{
   \begin{itemize}
@@ -80,16 +94,6 @@
 % \cvitem{题目}{\emph{题目}}
 % \cvitem{导师}{导师}
 % \cvitem{说明}{\small 论文简介}
-
-\section{荣誉奖项}
-\cvitem{2022}{北京大学优秀毕业生}
-\cvitem{2020}{北京大学三好学生标兵，学术创新奖，博士国家奖学金}
-\cvitem{2019}{北京大学三好学生，廖凯原奖学金}
-% \cvitem{2017}{北京大学学习进步奖，五四奖学金}
-\cvitem{2016}{中山大学优秀毕业生，优秀本科毕业论文}
-\cvitem{2013 -- 2015}{中山大学一等奖学金}
-\cvitem{2013, 2015}{国家奖学金}
-% \cvitem{2014}{佐丹奴奖学金}
 
 \section{研究方向及兴趣}
 \cvitem{}{孤独症谱系障碍，信息采样，决策，计算建模，计算精神病学，数据可视化}
@@ -139,12 +143,14 @@
 }
 
 \section{出版物}
+\subsection{预印本}
+\input{unpublished}
 \subsection{同行评议论文}
 \input{journal}
 \subsection{会议摘要}
 \input{conference}
 
-\section{工作经历}
+\section{教学经历}
 \cventry{2017 -- 2021}{课程助教}{心理与认知科学学院}{北京大学}{}{
   \begin{itemize}
     \item 课程：孤独症研究专题，儿童心理病理学，心理学论文写作
@@ -157,27 +163,37 @@
     \item 授课内容：《Ten Simple Rules for Better Figures》，《Reproducibility and Literate Programming in R》
   \end{itemize}
 }
-\cventry{2018 -- 2022}{课程培训人员}{思影科技有限公司}{重庆、南京、上海、北京}{}{
+\cventry{2018 -- 2022}{课程讲师}{思影科技有限公司}{重庆、南京、上海、北京}{}{
   \begin{itemize}
     \item 课程：眼动数据处理，R 语言统计
     \item 授课内容：在 R 中高效地对眼动数据与行为数据进行整理以及可视化
   \end{itemize}
 }
 
+\section{荣誉奖项}
+\cvitem{2022}{北京大学博雅博士后项目资助}
+\cvitem{2022}{北京大学优秀毕业生}
+\cvitem{2020}{北京大学三好学生标兵，学术创新奖，博士国家奖学金}
+\cvitem{2019}{北京大学三好学生，廖凯原奖学金}
+% \cvitem{2017}{北京大学学习进步奖，五四奖学金}
+\cvitem{2016}{中山大学优秀毕业生，优秀本科毕业论文}
+\cvitem{2013 -- 2015}{中山大学一等奖学金}
+\cvitem{2013, 2015}{国家奖学金}
+% \cvitem{2014}{佐丹奴奖学金}
+
 \section{学术团体与服务}
 \cvitem{团体会员}{Society for Research in Child Development, International Society for Autism Research, Cognitive Science Society}
-\cvitem{服务}{Journal of Autism and Developmental Disorders 审稿人}
+\cvitem{审稿}{Autism Research; Journal of Autism and Developmental Disorders; eLife; OpenMind}
 
 \section{专业技能与语言水平}
 \cvitemwithcomment{研究工具}{眼动}{掌握}
 \cvitemwithcomment{}{fNIRS, fMRI, EEG}{了解}
 \cvitemwithcomment{数据分析}{贝叶斯统计及层级贝叶斯模型，（广义）线性混合模型}{掌握}
 \cvitemwithcomment{}{广义加性模型, 生存分析，结构方程模型，机器学习方法}{熟悉}
-\cvitemwithcomment{编程/统计相关}{R, MATLAB, Psychotoolbox}{精通}
+\cvitemwithcomment{编程/统计}{R, MATLAB, Psychotoolbox}{精通}
 \cvitemwithcomment{}{Stan, SPSS, PsychoPy/PsychoJs, Git}{掌握}
 \cvitemwithcomment{}{JAGS, Mplus, E-Prime, Visual Basic, C++, Python, LaTeX}{熟悉}
 \cvitemwithcomment{语言}{英语}{高级}
-\cvitemwithcomment{}{法语}{初级}
 
 \clearpage
 % \end{CJK}
